@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(244, 244, 244);
+}
+
+div#principal{
+    width: 400px;
+    height: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+}
+
+div#red, div#blue, div#yellow{
+    height: 200px;
+    min-width: 400px;
+}
+
+div#container{
+    width: 900px;
+    height: 150px;
+    display: flex;
+    position: relative;
+}
+
+div.show-img button{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 50px;
+    background-color: #89898957;
+    color: #686868;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+div.show-img button:hover{
+    background-color: #89898922;
+    color: #68686833;
+    transition: all 0.3s;
+}
+
+.esquerda{
+    left: 300px;
+}
+
+.direita{
+    right: 300px;
+}
+
+img{
+    width: 400px;
+    height: 250px;
+}
+
+div.show-img{
+    display: flex;
+    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+}
+
+div.dark-light{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(207, 207, 207);
+    border-radius: 5px;
+}
+
+div.dark-light button{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+button#dark{
+    background-color: black;
+    border: none;
+}
+
+button#light{
+    background-color: white;
+    border: none;
+}

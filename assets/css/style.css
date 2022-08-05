@@ -12,6 +12,7 @@ body{
     width: 100%;
     height: 100vh;
     background-color: rgb(244, 244, 244);
+    transition: background-color 0.3s;
 }
 
 div#principal{
@@ -44,14 +45,14 @@ div.show-img button{
     border-radius: 10px;
     cursor: pointer;
     margin: 50px;
-    background-color: #89898957;
-    color: #686868;
+    background-color: #000000c8;
+    color: #ffffff6c;
     transition: background-color 0.3s, color 0.3s;
 }
 
 div.show-img button:hover{
-    background-color: #89898922;
-    color: #68686833;
+    background-color: #00000058;
+    color: #000000c6;
     transition: all 0.3s;
 }
 
@@ -70,12 +71,11 @@ img{
 
 div.show-img{
     display: flex;
-    border: 1px solid red;
     justify-content: center;
     align-items: center;
 }
 
-div.dark-light{
+div#dark-light{
     position: absolute;
     top: 10px;
     right: 10px;
@@ -83,7 +83,7 @@ div.dark-light{
     border-radius: 5px;
 }
 
-div.dark-light button{
+div#dark-light div{
     width: 50px;
     height: 50px;
     margin: 10px;
@@ -91,12 +91,35 @@ div.dark-light button{
     cursor: pointer;
 }
 
-button#dark{
+div#dark{
     background-color: black;
     border: none;
 }
 
-button#light{
+/* ----dark---- */
+
+
+body.dark-mode{
+    background-color: black;
+    transition: background-color 0.3s;
+}
+
+div.show-img button.dark-mode{
+    background-color: #ffffff9d;
+    color: #00000085;
+    transition: all 0.3s;
+}
+
+div.show-img button.dark-mode:hover{
+    background-color: #bdbdbd47;
+    color: #ffffff3f;
+    transition: all 0.3s;
+}
+
+div#dark-light.dark-mode{
+    background-color: rgb(22, 22, 22);
+}
+
+div#dark.dark-mode{
     background-color: white;
-    border: none;
 }

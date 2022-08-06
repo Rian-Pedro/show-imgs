@@ -1,3 +1,5 @@
+/* geral */
+
 *{
     padding: 0;
     margin: 0;
@@ -23,16 +25,22 @@ div#principal{
     display: flex;
 }
 
-div#red, div#blue, div#yellow{
-    height: 200px;
+div#images{
+    height: 250px;
     min-width: 400px;
+    border: 2px solid red;
+}
+
+img{
+    width: 400px;
+    height: 250px;
 }
 
 div#container{
-    width: 900px;
     height: 150px;
     display: flex;
     position: relative;
+    transition: left 1s, right 1s;
 }
 
 div.show-img button{
@@ -54,19 +62,6 @@ div.show-img button:hover{
     background-color: #00000058;
     color: #000000c6;
     transition: all 0.3s;
-}
-
-.esquerda{
-    left: 300px;
-}
-
-.direita{
-    right: 300px;
-}
-
-img{
-    width: 400px;
-    height: 250px;
 }
 
 div.show-img{

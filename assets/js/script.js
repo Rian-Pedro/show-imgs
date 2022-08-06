@@ -1,35 +1,40 @@
 const E = document.getElementById("esquerda");
 const D = document.getElementById("direita");
 const cont = document.getElementById("container");
+const teste = document.querySelectorAll("div#image");
+
 var count = 0;
+var numImg = 400;
+var px = 'px';
+var r = 0;
+var valor;
 
-E.addEventListener("click", vaiEsquerda);
-D.addEventListener("click", vaiDireita);
-
-function vaiEsquerda(){
-    if(count === 0){
-        return;
-    }else if(count === 1){
-        cont.style.right = "0px";
-        return count--;
-    }else if(count === 2){
-        cont.style.right = "400px";
-        return count--;
-    }
+for(let i = 0; i < teste.length; i++){
+    count++;
 }
 
-function vaiDireita(){
-    if(count === 0){
-        cont.style.right = "400px";
-        cont.style.transition = "all 0.5s";
-        return count++;
-    }else if(count === 1){
-        cont.style.right = "800px";
-        return count++;
-    }else if(count === 2){
-        cont.style.right = "0px";
-        return count = 0;
+D.addEventListener("click", direita)
+function direita(){
+    r++
+    valor = numImg * r + px;
+    if(r > teste.length - 1){
+        cont.style.right = 0;
+        r = 0;
+        return;
     }
+    cont.style.right = valor;
+}
+
+E.addEventListener("click", esquerda)
+function esquerda(){
+    if(r <= 0){
+        cont.style.right = "0px";
+        r = 0;
+        return;
+    }
+    r--;
+    valor = numImg * r + px;
+    cont.style.right = valor;
 }
 
 // ----show-imgs----
